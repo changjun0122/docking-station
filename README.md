@@ -9,10 +9,10 @@
 | 设计工具 | 立创EDA 专业版 3.2.149 |
 | 当前版本 | Rev2.0（板面丝印 `REV2.0`） |
 | 初版日期 | 2025-12-14 |
-| 最后修改 | 2026-11-05 |
+| 最后修改 | 2026-11-11 |
 | 状态 | Rev2.0 待打样 |
-| V1.0 工程 | `Project_V1.0/ProPrj_USB拓展坞_2026-11-04.epro2` |
-| Rev2.0 工程 | `Project_V2.0/ProPrj_USB拓展坞_2026-11-05.epro2` |
+| V1.0 工程 | `Project_V1.0/USB拓展坞_V1.0.epro2` |
+| Rev2.0 工程 | `Project_V2.0/USB拓展坞_V2.0.epro2` |
 
 ## 目录结构
 
@@ -22,13 +22,18 @@ docking-station/
 ├── CHANGELOG.md
 ├── .gitignore
 ├── Project_V1.0/
-│   └── ProPrj_USB拓展坞_2026-11-04.epro2     初版
+│   └── USB拓展坞_V1.0.epro2              初版
 ├── Project_V2.0/
-│   └── ProPrj_USB拓展坞_2026-11-05.epro2     问题修版
+│   ├── USB拓展坞_V2.0.epro2              问题修版（当前）
+│   ├── USB拓展坞_V2.0_Gerber.zip         打样文件
+│   └── USB拓展坞_V2.0_BOM.xlsx           物料清单
 └── docs/
     ├── V1-问题复盘.md
     └── images/
 ```
+
+一个版本一个目录：工程本体和该版导出的 Gerber / BOM 放一起，不散在根目录。
+文件命名统一「名称 + 版本」，不带日期。
 
 `.epro2` 是立创EDA专业版的完整工程包（原理图和 PCB 都在这一个文件里），
 用客户端的「打开工程」直接打开，不要解压后手动改里面的内容。
@@ -63,3 +68,4 @@ V1.0 试制后发现 4 个问题，Rev2.0 已修：
 
 - 导出产物（Gerber、BOM、坐标文件）是否入库，见 `.gitignore` 里的注释说明。
 - 改版时新建 `Project_Vn.0/` 目录，旧版本保留不删，方便对比。
+- 每版导出的 Gerber / BOM 放进对应 `Project_Vn.0/`，文件名带同一版本号，避免混版错料。
