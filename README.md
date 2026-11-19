@@ -26,10 +26,12 @@ docking-station/
 ├── Project_V2.0/
 │   ├── USB拓展坞_V2.0.epro2              问题修版（当前）
 │   ├── USB拓展坞_V2.0_Gerber.zip         打样文件
-│   └── USB拓展坞_V2.0_BOM.xlsx           物料清单
-└─ docs/
+│   ├── USB拓展坞_V2.0_BOM.xlsx           物料清单
+│   └── PCB_PCB1_2026-11-19.pdf           PCB 图（导出）
+└── docs/
     ├── V1-问题复盘.md
     ├── V2-焊接调试记录.md
+    ├── 拓展坞排查清单.md
     └── images/
 ```
 
